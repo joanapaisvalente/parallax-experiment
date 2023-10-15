@@ -1,5 +1,6 @@
 import Card from "./card";
 import Info from "./info";
+import MountainLayers from "./mountain-layers";
 import MultiLayerParallax from "./multi-layler-parallax";
 import Wave from "./wave";
 
@@ -7,7 +8,7 @@ function App() {
   return(
     <>
     <MultiLayerParallax />
-    <div className="w-full bg-zinc-800">
+    <div className="w-full bg-[#1D2124]">
       <div className="max-w-lg space-y-4 mx-auto text-slate-50 pt-8 pb-4">
         <Info />
         <Info />
@@ -20,6 +21,15 @@ function App() {
         <Card />
         <Card />
         <Card />
+    </div>
+    <MountainLayers />
+    <div className="w-full bg-[#1A3644] pb-16">
+      <div className="max-w-lg space-y-4 mx-auto text-slate-50 pt-8 pb-4">
+        <Info />
+        <Info />
+        <Info />
+        <Info />
+      </div>
     </div>
     </>
   );
