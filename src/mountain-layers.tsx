@@ -11,9 +11,10 @@ const MountainLayers = () => {
     const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
     const thirdY = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
     const secondY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+    const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div ref={ref} className='w-full h-screen overflow-hidden relative'>
+    <div ref={ref} className='w-full h-screen overflow-hidden relative flex justify-center'>
         <motion.div 
             className='absolute inset-0 z-0 h-full'
             style={{
@@ -24,7 +25,7 @@ const MountainLayers = () => {
             }}
         />
         <motion.div 
-            className='absolute inset-0 z-0 h-full'
+            className='absolute inset-0 z-10 h-full'
             style={{
                 backgroundImage: 'url(/third.png)',
                 backgroundPosition: 'bottom',
@@ -32,8 +33,12 @@ const MountainLayers = () => {
                 y: thirdY
             }}
         />
+        <motion.h1  
+            style={{y: textY}}
+            className='font-bold z-20 text-white text-3xl md:text-8xl relative mt-64'>estás a dormir?
+        </motion.h1>
         <motion.div 
-            className='absolute inset-0 z-0 h-full'
+            className='absolute inset-0 z-30 h-full'
             style={{
                 backgroundImage: 'url(/second.png)',
                 backgroundPosition: 'bottom',
@@ -42,7 +47,7 @@ const MountainLayers = () => {
             }}
         />
         <div 
-            className='absolute inset-0 z-0 h-full'
+            className='absolute inset-0 h-full z-40'
             style={{
                 backgroundImage: 'url(/first.png)',
                 backgroundPosition: 'bottom',
