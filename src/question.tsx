@@ -10,17 +10,16 @@ const Question: React.FC = () => {
         offset: ["start start", "end start"],
     });
 
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 0.4, 0.8], ["100%", "0%", "100%"]);
 
     return (
-        <div className='relative'>
-            <div 
-                className="w-full pb-16 h-screen"
-                style={{
-                    backgroundImage: 'url(/mexican-after-party.jpeg)',
-                    backgroundSize: "cover"
-                }}>
-            </div>
+        <div 
+            className='relative h-screen w-full'
+            style={{
+                backgroundImage: 'url(/mexican-after-party.jpeg)',
+                backgroundSize: "cover"
+            }}
+        >
             <motion.div 
                 ref={ref} 
                 className='absolute top-0 left-0 w-full h-screen bg-[#B0BCBA] z-10  flex justify-center items-center'
