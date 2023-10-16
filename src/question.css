@@ -1,0 +1,11 @@
+.question-p { 
+    background-image: url(../public/mexican-after-party.jpeg); 
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-align: center; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-weight: 800; 
+    -webkit-font-smoothing: antialiased; 
+} 

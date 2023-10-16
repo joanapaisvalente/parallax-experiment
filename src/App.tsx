@@ -2,6 +2,7 @@ import Card from "./card";
 import Info from "./info";
 import MountainLayers from "./mountain-layers";
 import MultiLayerParallax from "./multi-layler-parallax";
+import Question from "./question";
 import Wave from "./wave";
 
 function App() {
@@ -29,6 +30,12 @@ function App() {
       </div>
     </div>
     <Wave backgroundColor="#1A3644" waveColor="#B0BCBA"/>
+    <div className="w-full bg-[#B0BCBA] pb-16 h-screen flex justify-center items-center">
+      <div className="max-w-lg space-y-4 mx-auto text-slate-50 pt-8 pb-4">
+        <Info text="Estás a dormir?" />
+      </div>
+    </div>
+    <Question />
     <div className="w-full bg-[#B0BCBA] pb-16 h-screen flex justify-center items-center">
       <div className="max-w-lg space-y-4 mx-auto text-slate-50 pt-8 pb-4">
         <Info text="Estás a dormir?" />
