@@ -10,8 +10,8 @@ const Question: React.FC = () => {
         offset: ["start start", "end start"],
     });
 
-    const opacityProgress = useTransform(scrollYProgress, [0, 0.4, 0.8], ["100%", "0%", "100%"]);
-
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+    const textProgress = useTransform(scrollYProgress, [0, 1], ["100%", "200%"])
     return (
         <div 
             className='relative h-screen w-full'
@@ -24,11 +24,17 @@ const Question: React.FC = () => {
                 ref={ref} 
                 className='absolute top-0 left-0 w-full h-screen bg-[#B0BCBA] z-10  flex justify-center items-center'
                 style={{
-                    opacity: opacityProgress
+                    opacity: opacityProgress,
                 }}
             >
                 <div className="font-bold text-slate-50">
-                    <p className='text-7xl question-p'>ESTÁS A DORMIR?</p>
+                    <motion.p 
+                        className='text-7xl question-p'
+                        style={{
+                            scale: textProgress
+                        }}
+
+                    >ESTÁS A DORMIR?</motion.p>
                 </div>
             </motion.div>
         </div>

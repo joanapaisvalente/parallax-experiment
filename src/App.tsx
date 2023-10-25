@@ -38,7 +38,7 @@ function App() {
     <Question />
     <div className="w-full bg-[#B0BCBA] pb-16 h-screen flex justify-center items-center">
       <div className="max-w-lg space-y-4 mx-auto text-slate-50 pt-8 pb-4">
-        <Info text="Estás a dormir?" />
+        <Info text="Bruno SAI!" />
       </div>
     </div>
     </>
